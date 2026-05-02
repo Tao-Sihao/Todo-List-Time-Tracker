@@ -7,15 +7,15 @@ This project is a lightweight productivity tool built with **HTML, CSS, and Java
 ## Features
 
 - Add todo tasks
-- ![App Screenshot](/todo-list-time-tracker/images/screenshot1.png)
+- ![App Screenshot](/images/screenshot1.png)
 - Start tracking a task
 - Stop tracking a task
-- ![App Screenshot](/todo-list-time-tracker/images/screenshot2.png)
+- ![App Screenshot](/images/screenshot2.png)
 - Automatically record start time and end time
 - Automatically calculate work duration
 - Support multiple work sessions for the same task
 - Show today’s total work time
-- ![App Screenshot](/todo-list-time-tracker/images/screenshot3.png)
+- ![App Screenshot](/images/screenshot3.png)
 - Show today’s session count
 - Mark tasks as completed
 - View task-level work history
