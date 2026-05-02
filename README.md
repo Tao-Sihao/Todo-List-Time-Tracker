@@ -40,16 +40,6 @@ The app records the end time
 The app calculates the work duration automatically
 ```
 
-## Tech Stack
-
-- HTML
-- CSS
-- JavaScript
-- Browser `localStorage`
-- SVG line chart
-
-No framework, backend, or database is required.
-
 ## How to Use
 
 Open `index.html` in your browser.
