@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Todo List Time Tracker</title>
+  <link rel="stylesheet" href="./styles.css" />
+
+</head>
+<body>
+  <header>
+    <h1>Todo List Time Tracker</h1>
+    <p>
+      A simple browser-based todo list and work time tracker. Add a task, click start to record the start time, click stop to record the end time, and let the app calculate your total work duration automatically.
+    </p>
+  </header>
+
+  <main>
+    <section class="card">
+      <h2>1. Add a Task</h2>
+      <div class="form-grid">
+        <div>
+          <label>Task name</label>
+          <input id="title" placeholder="e.g. Write product requirements" />
+        </div>
+        <div>
+          <label>Category</label>
+          <select id="category">
+            <option value="Work">Work</option>
+            <option value="Study">Study</option>
+            <option value="Writing">Writing</option>
+            <option value="Life">Life</option>
+          </select>
+        </div>
+        <div>
+          <label>Estimated minutes, optional</label>
+          <input id="estimated" type="number" min="0" step="5" placeholder="60" />
+        </div>
+      </div>
+
+      <div class="actions">
+        <button onclick="addTask()">Add Task</button>
+        <button class="secondary" onclick="loadSample()">Load Sample Data</button>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>2. Today’s Summary</h2>
+      <div class="summary">
+        <div class="metric">
+          <strong id="todayTotal">0s</strong>
+          <span>Total work time today</span>
+        </div>
+        <div class="metric">
+          <strong id="activeTask">None</strong>
+          <span>Currently tracking</span>
+        </div>
+        <div class="metric">
+          <strong id="recordCount">0</strong>
+          <span>Sessions today</span>
+        </div>
+        <div class="metric">
+          <strong id="doneCount">0/0</strong>
+          <span>Tasks completed today</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="card full">
+      <h2>3. Work Log</h2>
+      <div id="taskList"></div>
+    </section>
+
+    <section class="card full">
+      <h2>4. Work Duration Trend</h2>
+      <div class="toolbar">
+        <div>
+          <label>Trend range</label>
+          <select id="chartRange" onchange="renderAll()">
+            <option value="7">Last 7 days</option>
+            <option value="30">Last 30 days</option>
+          </select>
+        </div>
+        <div>
+          <label>Chart metric</label>
+          <select onchange="renderAll()" disabled>
+            <option>Daily total work duration</option>
+          </select>
+        </div>
+      </div>
+      <div id="chart"></div>
+    </section>
+  </main>
+  <script src="./app.js"></script>
+</body>
+</html>
